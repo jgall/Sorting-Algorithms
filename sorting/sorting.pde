@@ -2,7 +2,7 @@
 
 void setup(){
   int[] array = {8,3,5,2,4,1};
-  int[] array1 = selectionSort(array);
+  int[] array1 = bubbleSort(array);
   
   println(array1);
 }
@@ -11,6 +11,20 @@ void swap(int[] array, int a, int b){
   int temp = array[a];
   array[a] = array[b];
   array[b] = temp;
+}
+
+int[] bubbleSort(int[] array){
+  int temp;
+  for(int i = 0; i < array.length; i++){
+    for(int j = 0; j < array.length-1; j++){
+      if(array[j] > array[j+1]){
+        temp = array[j];
+        array[j] = array[j+1];
+        array[j+1] = temp;
+      }
+    }
+  }
+  return array;
 }
 
 int[] selectionSort(int[] array){
