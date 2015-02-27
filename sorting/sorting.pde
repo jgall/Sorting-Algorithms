@@ -3,8 +3,9 @@
 void setup(){
   int[] array = {8,3,5,2,4,1};
   int[] array1 = bubbleSort(array);
-  
+  int[] array2 = selectionSort(array);
   println(array1);
+  println(array2);
 }
 
 void swap(int[] array, int a, int b){
