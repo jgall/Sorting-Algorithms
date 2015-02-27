@@ -46,3 +46,11 @@ int[] selectionSort(int[] array){
   return array;
   
 }
+
+int[] mergeSort(int[] array){
+  
+}
+
+int[] bogoBogoSort(int[] array){
+  return array;
+}
