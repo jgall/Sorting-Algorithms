@@ -47,7 +47,7 @@ int[] selectionSort(int[] array){
   
 }
 
-int[] mergeSort(int[] array){
+int[] mergeSort(int[] array, int start, int len){
   
 }
 
