@@ -7,8 +7,11 @@ void setup() {
   int[] array1 = bubbleSort(array);
   int[] array2 = selectionSort(array);
   int[] array3 = mergeSort(array);
+  println("bubbleSort:");
   println(array1);
+  println("selectionSort:");
   println(array2);
+  println("mergeSort:");
   println(array3);
 }
 
