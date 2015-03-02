@@ -71,10 +71,10 @@ int[] merge(int[] array1, int[] array2) {
   int index1 = 0, index2 = 0;
   int[] finalArray = new int[array1.length+array2.length];
   while (array1.length > index1 || array2.length > index2) {
-    if(array1.length == index1-1){
+    if(array1.length == index1+1){
      finalArray[index1+index2] = array2[index2];
      index2++;
-    } else if(array2.length == index2-1) {
+    } else if(array2.length == index2+1) {
       finalArray[index1+index2] = array1[index1];
       index1++;
     } else if (array1[index1] < array2[index2]) {
