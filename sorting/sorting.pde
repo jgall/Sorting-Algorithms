@@ -1,9 +1,8 @@
 
 
 void setup() {
-  int[] array = {
-    8, 3, 5, 2, 4, 1, 10, 44, 24, 23
-  };
+  int[] array = buildArray(10, 10);
+  println(array);
   //int[] array1 = bubbleSort(array);
   //int[] array2 = selectionSort(array);
   int[] array3 = mergeSort(array);
@@ -13,6 +12,24 @@ void setup() {
   //println(array2);
   println("mergeSort:");
   println(array3);
+}
+
+int[] buildArray(int len, int index) {
+  int temp, rand1, rand2;
+  int[] array = new int[len];
+  for (int i = 0; i<array.length; i++) {
+    array[i] = len-i;
+  }
+  for (int j = 0; j < index; j++) {
+    for (int i = 0; i<array.length; i++) {
+      rand1 = int(random(-1, len));
+      rand2 = int(random(-1, len));
+      temp = array[rand1];
+      array[rand1] = array[rand2];
+      array[rand2] = temp;
+    }
+  }
+  return array;
 }
 
 void swap(int[] array, int a, int b) {
@@ -79,11 +96,11 @@ int[] merge(int[] array1, int[] array2) {
       index2++;
     }
   }
-  while(array1.length > index1){
-      finalArray[index1+index2] = array1[index1];
-      index1++;
+  while (array1.length > index1) {
+    finalArray[index1+index2] = array1[index1];
+    index1++;
   }
-  while(array2.length > index2){
+  while (array2.length > index2) {
     finalArray[index1+index2] = array2[index2];
     index2++;
   }
