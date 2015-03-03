@@ -1,8 +1,6 @@
-
-
 void setup() {
-  int[] array = buildArray(10, 10);
-  println(array);
+  int[] array = buildArray(50000, 5);
+  //println(array);
   //int[] array1 = bubbleSort(array);
   //int[] array2 = selectionSort(array);
   int[] array3 = mergeSort(array);
@@ -10,8 +8,8 @@ void setup() {
   //println(array1);
   //println("selectionSort:");
   //println(array2);
-  println("mergeSort:");
-  println(array3);
+  //println("mergeSort:");
+  //println(array3);
 }
 
 int[] buildArray(int len, int index) {
