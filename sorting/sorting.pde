@@ -1,15 +1,18 @@
 void setup() {
-  int[] array = buildArray(50000, 5);
+  int[] array = buildArray(50000000, 5);
   //println(array);
   //int[] array1 = bubbleSort(array);
   //int[] array2 = selectionSort(array);
+  int a = millis(), b;
   int[] array3 = mergeSort(array);
+  b = millis() - a;
   //println("bubbleSort:");
   //println(array1);
   //println("selectionSort:");
   //println(array2);
   //println("mergeSort:");
   //println(array3);
+  println("sorted in " + b + " milliseconds");
 }
 
 int[] buildArray(int len, int index) {
@@ -20,8 +23,8 @@ int[] buildArray(int len, int index) {
   }
   for (int j = 0; j < index; j++) {
     for (int i = 0; i<array.length; i++) {
-      rand1 = int(random(-1, len));
-      rand2 = int(random(-1, len));
+      rand1 = int(random(0, len));
+      rand2 = int(random(0, len));
       temp = array[rand1];
       array[rand1] = array[rand2];
       array[rand2] = temp;
